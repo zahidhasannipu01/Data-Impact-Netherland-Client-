@@ -41,7 +41,7 @@ const ProductCard = ({ ProductData }) => {
 						return (
 							<div
 								key={items.id}
-								className='relative scale-100 hover:scale-105 duration-300  lg:w-[208.5px] 2xl:w-[200px] md:w-[212px] w-[180px] h-auto border rounded-xl overflow-hidden'>
+								className='relative scale-100 hover:scale-105 duration-300  lg:w-[208.5px] 2xl:w-[200px] md:w-[212px] w-[180px] h-auto border rounded-xl overflow-hidden bg-white'>
 								<div className='absolute top-2 right-2 z-[999] w-6 h-6 flex justify-center items-center text-lg bg-white  drop-shadow-lg cursor-pointer duration-300 hover:bg-secondary hover:text-white p-[0.3rem] text-gray-400 rounded-full '>
 									<FaRegHeart />
 								</div>

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+	background-color: #f2f4f8;
+}
+
+.PhoneInputInput:focus {
+	outline: none !important;
+}
+
+.PhoneInputInput {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
