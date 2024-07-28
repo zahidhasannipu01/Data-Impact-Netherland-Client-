@@ -11,7 +11,7 @@ const SingleProductTab = ({ SingleProductData }) => {
 	};
 	console.log(Toggle);
 	return (
-		<div className=''>
+		<div className='duration-500'>
 			<div className='flex gap-4'>
 				<div
 					onClick={() => updateToggle(1)}

@@ -10,7 +10,7 @@ const InfoHeader = () => {
 	return (
 		<div className=' bg-primary'>
 			<Container>
-				<div className='flex justify-between items-center  h-[30px]'>
+				<div className='flex justify-between items-center  h-[15px]'>
 					<div className='flex gap-5'>
 						<div className='flex gap-2 items-center'>
 							<div className='p-[3px] bg-secondary text-white text-sm rounded-full'>

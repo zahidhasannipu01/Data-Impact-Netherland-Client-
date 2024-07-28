@@ -6,8 +6,13 @@ import { MdEmail, MdLock, MdPassword } from "react-icons/md";
 import { IoMdEye } from "react-icons/io";
 import { FaFacebook } from "react-icons/fa6";
 import { BsGoogle } from "react-icons/bs";
-const EcomLogin = () => {
-	const [ShowPassword, setShowPassword] = useState(true);
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+
+const EcomRegister = () => {
+	const [Value, setValue] = useState("");
+
+	console.log(Value);
 	return (
 		<Container>
 			<div className=' flex  mt-12  mx-auto my-auto justify-center items-center'>
@@ -20,7 +25,7 @@ const EcomLogin = () => {
 						/>
 					</div>
 					<div className='text-center mt-8 md:mt-8 lg:mt-4 2xl:mt-8'>
-						<p className='text-2xl font-bold'>Welcome Back!</p>
+						<p className='text-2xl font-bold'>Signup For Best Deals!</p>
 						<p className='text-md font-semibold text-slate-400'>
 							Data Impact - Netherland
 						</p>
@@ -39,31 +44,38 @@ const EcomLogin = () => {
 							</div>
 						</div>
 					</div>
+
 					<div>
 						<div className='border flex items-center rounded-md'>
+							<div>
+								<PhoneInput
+									className='w-[320px] md:w-[400px] p-3 focus:outline-none phoneNumber'
+									value={Value}
+									onChange={setValue}
+									defaultCountry='NL'
+									international={false}
+									placeholder='Phone Number'
+								/>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div className='border flex items-center rounded-md mt-5'>
 							<div className='p-3 text-2xl text-slate-400'>
 								<MdLock />
 							</div>
 							<div>
 								<input
-									type={ShowPassword ? "password" : "text"}
-									className='w-[270px] md:w-[300px] p-3 focus:outline-none'
+									type='text'
+									className='w-[320px] md:w-[350px] p-3 focus:outline-none'
 									placeholder='Password'
 								/>
 							</div>
-							<div
-								onClick={() => setShowPassword(!ShowPassword)}
-								className='p-3 text-2xl text-slate-400'>
-								{ShowPassword ? <IoMdEye /> : <MdPassword />}
-							</div>
-						</div>
-						<div className='mt-1 flex justify-end items-end text-xs hover:font-semibold hover:text-secondary cursor-pointer duration-500'>
-							<p>Forget Password ?</p>
 						</div>
 					</div>
 					<div className='w-[350px] h-[40px] mt-10 rounded-lg hover:bg-primary duration-300 active:bg-secondary flex justify-center items-center bg-secondary cursor-pointer'>
 						<div className='text-md font-semibold text-white'>
-							<p>Login</p>
+							<p>Register</p>
 						</div>
 					</div>
 					<div className='w-[350px] h-auto mt-6'>
@@ -92,4 +104,4 @@ const EcomLogin = () => {
 	);
 };
 
-export default EcomLogin;
+export default EcomRegister;

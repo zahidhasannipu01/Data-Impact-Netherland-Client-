@@ -30,16 +30,16 @@ const EcomSideIcons = () => {
 					<p>€2590</p>
 				</div>
 			</div>
-			<div className='flex gap-1 items-center duration-200 hover:bg-hover px-2 py-1 rounded-md cursor-pointer'>
-				<div className='p-2 bg-primary text-lg text-white rounded-full duration-200  hover:bg-secondary'>
-					<FaRegUserCircle />
-				</div>
-				<Link to={"/login"}>
+			<Link to={"/login"}>
+				<div className='flex gap-1 items-center duration-200 hover:bg-hover px-2 py-1 rounded-md cursor-pointer'>
+					<div className='p-2 bg-primary text-lg text-white rounded-full duration-200  hover:bg-secondary'>
+						<FaRegUserCircle />
+					</div>
 					<div className='block md:hidden lg:hidden xl:block'>
 						<p>Login/Signup</p>
 					</div>
-				</Link>
-			</div>
+				</div>
+			</Link>
 		</div>
 	);
 };
