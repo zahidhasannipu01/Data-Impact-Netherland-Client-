@@ -11,7 +11,7 @@ const SingleProductTab = ({ SingleProductData }) => {
 	};
 	console.log(Toggle);
 	return (
-		<div>
+		<div className=''>
 			<div className='flex gap-4'>
 				<div
 					onClick={() => updateToggle(1)}
@@ -29,11 +29,15 @@ const SingleProductTab = ({ SingleProductData }) => {
 					<p>Reviews</p>
 				</div>
 			</div>
-			{Toggle === 1 && (
-				<SingleProductDescription SingleProductData={SingleProductData} />
-			)}
-			{Toggle === 2 && <SingleProductSpecification />}
-			{Toggle === 3 && <SingleProductReviews />}
+			<div className='mt-4'>
+				{Toggle === 1 && (
+					<SingleProductDescription SingleProductData={SingleProductData} />
+				)}
+				{Toggle === 2 && (
+					<SingleProductSpecification SingleProductData={SingleProductData} />
+				)}
+				{Toggle === 3 && <SingleProductReviews />}
+			</div>
 		</div>
 	);
 };

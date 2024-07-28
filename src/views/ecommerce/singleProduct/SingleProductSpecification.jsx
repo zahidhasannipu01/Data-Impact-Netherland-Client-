@@ -1,34 +1,43 @@
 import React from "react";
 
-const SingleProductSpecification = () => {
+const SingleProductSpecification = ({ SingleProductData }) => {
+	const filterProductsSpecification = (options) => {
+		const groupSpecification = {};
+
+		options.forEach((option) => {
+			if (!groupSpecification[option.title]) {
+				groupSpecification[option.title] = [];
+			}
+			groupSpecification[option.title].push({
+				specification: option.specification,
+				value: option.value,
+			});
+		});
+		return groupSpecification;
+	};
+
+	const filteredSpecification = SingleProductData?.product_specifications
+		? filterProductsSpecification(SingleProductData.product_specifications)
+		: {};
+
+	console.log(filteredSpecification);
 	return (
 		<div>
-			<table class='table-auto border p-4'>
-				<thead className='bg-slate-400'>
-					<tr>
-						<th className='p-4'>Song</th>
-						<th>Artist</th>
-						<th>Year</th>
-					</tr>
-				</thead>
+			<table className='min-w-full bg-white border border-gray-300 p-4'>
 				<tbody>
-					<tr>
-						<td className='p-4'>
-							The Sliding Mr. Bones (Next Stop, Pottersville)
-						</td>
-						<td>Malcolm Lockyer</td>
-						<td>1961</td>
-					</tr>
-					<tr>
-						<td>Witchy Woman</td>
-						<td>The Eagles</td>
-						<td>1972</td>
-					</tr>
-					<tr>
-						<td>Shining Star</td>
-						<td>Earth, Wind, and Fire</td>
-						<td>1975</td>
-					</tr>
+					{Object.keys(filteredSpecification).map((spec) => (
+						<tr key={spec} className='border'>
+							<td className='px-2 py-1 border font-semibold'>{spec}</td>
+							{filteredSpecification[spec].map((specification, index) => (
+								<td key={index} className='border px-2 py-1'>
+									<p className='font-medium'>
+										{specification.specification || ""}:
+									</p>
+									<p>{specification.value || ""}</p>
+								</td>
+							))}
+						</tr>
+					))}
 				</tbody>
 			</table>
 		</div>

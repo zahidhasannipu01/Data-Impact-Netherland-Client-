@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Logo from "../../../../assets/ecommerce/logo/official_logo.jpg";
 import MobileSearchBar from "./MobileSearchBar";
 import { FiSearch } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const MobileHeader = () => {
 	const [IsShow, setIsShow] = useState(false);
@@ -21,7 +22,9 @@ const MobileHeader = () => {
 			) : (
 				<div className=' flex justify-between items-center px-2 py-2'>
 					<div className='w-[120px]'>
-						<img src={Logo} alt='' />
+						<Link to={"/"}>
+							<img src={Logo} alt='' />
+						</Link>
 					</div>
 					<div
 						onClick={ShowSearchBar}

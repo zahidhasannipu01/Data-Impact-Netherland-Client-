@@ -2,6 +2,7 @@ import React from "react";
 import { GoGitCompare } from "react-icons/go";
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const EcomSideIcons = () => {
 	return (
@@ -33,9 +34,11 @@ const EcomSideIcons = () => {
 				<div className='p-2 bg-primary text-lg text-white rounded-full duration-200  hover:bg-secondary'>
 					<FaRegUserCircle />
 				</div>
-				<div className='block md:hidden lg:hidden xl:block'>
-					<p>Login/Signup</p>
-				</div>
+				<Link to={"/login"}>
+					<div className='block md:hidden lg:hidden xl:block'>
+						<p>Login/Signup</p>
+					</div>
+				</Link>
 			</div>
 		</div>
 	);

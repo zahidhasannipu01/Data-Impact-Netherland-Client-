@@ -13,7 +13,7 @@ const SingleProductImage = ({ SingleProductData }) => {
 	console.log(MainImage);
 	return (
 		<div>
-			<div className='w-full h-[300px] '>
+			<div className='w-full h-full'>
 				<div className='w-full h-full object-cover rounded-lg overflow-hidden'>
 					<img className='w-full h-full object-cover' src={MainImage} alt='' />
 				</div>
@@ -25,7 +25,7 @@ const SingleProductImage = ({ SingleProductData }) => {
 						</div>
 					) : (
 						<Swiper
-							spaceBetween={1}
+							spaceBetween={10}
 							slidesPerView={4}
 							autoplay={{
 								delay: 5000,

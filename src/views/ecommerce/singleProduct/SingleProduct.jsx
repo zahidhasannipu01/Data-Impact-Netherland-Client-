@@ -26,7 +26,7 @@ const SingleProduct = () => {
 	console.log(SingleProductData);
 	return (
 		<Container>
-			<div className='grid grid-cols-3 grid-flow-col h-auto p-5 gap-4 rounded-2xl shadow-lg mb-5'>
+			<div className='grid grid-cols-1 lg:grid-cols-3 h-auto p-5 gap-4 rounded-2xl shadow-lg mb-5'>
 				<div className=''>
 					<SingleProductImage SingleProductData={SingleProductData} />
 				</div>
@@ -40,8 +40,8 @@ const SingleProduct = () => {
 					<SingleProductPrice SingleProductData={SingleProductData} />
 				</div>
 			</div>
-			<div className='grid grid-cols-3 grid-flow-col h-auto p-5 gap-4 rounded-2xl shadow-lg mb-5'>
-				<div className='col-span-2'>
+			<div className='grid grid-cols-1 lg:grid-cols-3 h-auto p-5 gap-4 rounded-2xl shadow-lg mb-5'>
+				<div className='col-span-2 mt-4'>
 					<SingleProductTab SingleProductData={SingleProductData} />
 				</div>
 				<div></div>
