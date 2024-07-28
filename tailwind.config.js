@@ -14,6 +14,9 @@ module.exports = {
 				secondary: GlobalColor.secondary,
 				hover: GlobalColor.hover,
 			},
+			animation: {
+				"spin-slow": "spin 3s linear infinite",
+			},
 		},
 	},
 	plugins: [],

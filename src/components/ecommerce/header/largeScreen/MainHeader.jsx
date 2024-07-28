@@ -5,7 +5,7 @@ import EcomSearchbar from "./components/searchbar/EcomSearchbar";
 import EcomSideIcons from "./components/sideIcons/EcomSideIcons";
 const MainHeader = () => {
 	return (
-		<div className='h-[76px] py-3'>
+		<div className='h-[76px] py-2'>
 			<Container>
 				<div className='flex items-center gap-2'>
 					<div className='w-[200px]'>
