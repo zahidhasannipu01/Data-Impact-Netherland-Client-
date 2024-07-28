@@ -6,13 +6,17 @@ import BottomMenu from "../../components/ecommerce/bottomMenu/BottomMenu";
 
 const EcomLayout = () => {
 	return (
-		<div className='w-screen h-screen flex flex-col overflow-y-scroll'>
-			<EcomHeader />
-			<div className='flex-1'>
+		<div className='w-full h-full flex flex-col relative min-h-screen'>
+			<div className='w-full fixed top-0 z-[999] bg-white'>
+				<EcomHeader />
+			</div>
+			<div className='flex-1 mt-16 2xl:mt-28 lg:mt-[7.8rem] md:mt-28 items-center justify-center flex'>
 				<Outlet />
 			</div>
-			<EcomFooter />
-			<div className='absolute flex-1 bottom-0 block md:hidden z-50'>
+			<div className='w-full bottom-0'>
+				<EcomFooter />
+			</div>
+			<div className='fixed bottom-0 block md:hidden z-50'>
 				<BottomMenu />
 			</div>
 		</div>

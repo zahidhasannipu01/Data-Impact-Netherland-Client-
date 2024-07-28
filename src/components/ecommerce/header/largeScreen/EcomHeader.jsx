@@ -9,7 +9,7 @@ const EcomHeader = () => {
 			<div className=' hidden md:block'>
 				<InfoHeader />
 			</div>
-			<div className='hidden md:block'>
+			<div className=' hidden md:block'>
 				<MainHeader />
 			</div>
 			<div className='block md:hidden'>
